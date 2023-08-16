@@ -15,6 +15,7 @@ You'll need the following values:
 ```text
 V3_TOKEN =
 GRANT_ID =
+V3_HOST = 
 ```
 
 Add the above values to a new `.env` file:
