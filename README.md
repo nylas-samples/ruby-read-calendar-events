@@ -2,8 +2,6 @@
 
 This sample will show you to easily read your calendar events using the Nylas Ruby SDK.
 
-You can follow along step-by-step in our blog post ["How to Manage Calendar Events with the Nylas Ruby SDK"](https://www.nylas.com/blog/how-to-manage-calendar-events-with-the-nylas-ruby-sdk/).
-
 ## Setup
 
 ### System dependencies
@@ -15,10 +13,8 @@ You can follow along step-by-step in our blog post ["How to Manage Calendar Even
 You'll need the following values:
 
 ```text
-ACCESS_TOKEN =
-CLIENT_ID =
-CLIENT_SECRET =
-CALENDAR_ID =
+V3_TOKEN =
+GRANT_ID =
 ```
 
 Add the above values to a new `.env` file:
