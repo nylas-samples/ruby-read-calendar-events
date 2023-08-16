@@ -1,45 +1,53 @@
-# code-sample-description
-This sample repo will show you how to easily do X with Nylas.
+# ruby-read-calendar-events
+
+This sample will show you to easily read your calendar events using the Nylas Ruby SDK.
+
+You can follow along step-by-step in our blog post ["How to Manage Calendar Events with the Nylas Ruby SDK"](https://www.nylas.com/blog/how-to-manage-calendar-events-with-the-nylas-ruby-sdk/).
 
 ## Setup
 
 ### System dependencies
 
-- Add System dependencies
+- Ruby v3.x
 
 ### Gather environment variables
 
-You'll need the following values from the Nylas Dashboard:
+You'll need the following values:
 
 ```text
-ACCESS_TOKEN = ""
-CLIENT_ID = ""
-CLIENT_SECRET = ""
+ACCESS_TOKEN =
+CLIENT_ID =
+CLIENT_SECRET =
+CALENDAR_ID =
 ```
 
-Add the above values to a `.env` file.
+Add the above values to a new `.env` file:
 
-The `.env` file is added to `.gitignore`. Ensure to store these values securely.
+```bash
+$ touch .env # Then add your env variables
+```
 
 ### Install dependencies
 
-[replace with install steps]
 ```bash
-$ npm i
+$ gem install nylas
+$ gem install dotenv
 ```
 
 ## Usage
 
-The recommended way to use this sample is ...
+Run the script using the `ruby` command:
 
-You can also clone the repository ...
+```bash
+$ ruby ReadEvents.rb
+```
 
-You'll find more detailed instructions ...
+You will get a list of all events in the following format
 
-## Get support
-
-If you found a bug or want to suggest a new [feature/use case/sample], please file an issue.
+```text
+Id: dshdjhsdjhd | Title: This is a meeting | Start: 2023-01-01 10:00 | End: 2023-01-01 10:30:00 | Participants [{Name: Swag, Emai: swag@nylas.com, Status: yes}]
+```
 
 ## Learn more
 
-Visit our [Nylas documentation](https://developer.nylas.com/) to learn more.
+Visit our [Nylas Ruby SDK documentation](https://developer.nylas.com/docs/developer-tools/sdk/ruby-sdk/) to learn more.
