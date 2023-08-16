@@ -5,7 +5,7 @@ require 'nylas'
 # Initialize Nylas client
 nylas = Nylas::Client.new(
 	api_key: ENV["V3_TOKEN"],
-	host: "https://api-staging.us.nylas.com"
+	host: ENV["V3_HOST"]
 )
 
 # Query parameters
