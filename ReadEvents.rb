@@ -16,10 +16,6 @@ query_params = {
 query_params['start'] = "1692187200" # From 8:00am
 query_params['end'] = "1692219600" # To 5:00pm
 
-identifier = {
-    grant_id: ENV["GRANT_ID"]
-  }
-
 # Read events from our main calendar in the specified date and time
 events, _request_ids = nylas.events.list(identifier: ENV["GRANT_ID"], query_params: query_params)
 
