@@ -5,7 +5,7 @@ require 'nylas'
 # Initialize Nylas client
 nylas = Nylas::Client.new(
 	api_key: ENV["V3_TOKEN"],
-	host: ENV["V3_HOST"]
+	api_uri: ENV["V3_HOST"]
 )
 
 # Query parameters
@@ -13,8 +13,15 @@ query_params = {
     calendar_id: ENV["GRANT_ID"]
   }
 
-query_params['start'] = "1692187200" # From 8:00am
-query_params['end'] = "1692219600" # To 5:00pm
+# Get today’s date
+today = Date.today
+# Today’s date at 12:00:00 am
+_START = Time.local(today.year, today.month, today.day, 12, 0, 0).strftime("%s")
+# Today’s date at 11:59:59 pm
+_END = Time.local(today.year, today.month, today.day, 14, 0, 0).strftime("%s")
+
+query_params['start'] = _START
+query_params['end'] = _END
 
 # Read events from our main calendar in the specified date and time
 events, _request_ids = nylas.events.list(identifier: ENV["GRANT_ID"], query_params: query_params)
